@@ -7,7 +7,7 @@
     "build": "ng build",
     "build-prod": "ng build --base-href \"https://pedromontemor.github.io/levarme-client/\"",
     "watch": "ng build --watch --configuration development",
-    "deploy": "npx angular-cli-ghpages --dir=./dist/livraria --no-silent --repo=https://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@github.com/pedromontemor/levarme.git --name=\"pedromontemor\" --email=\"p.montemorfaria@gmail.com\"",
+    "deploy": "npx angular-cli-ghpages --dir=./dist/livraria --no-silent --repo=https://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@github.com/pedromontemor/levarme-client.git --name=\"pedromontemor\" --email=\"p.montemorfaria@gmail.com\"",
     "test": "ng test"
   },
   "private": true,
