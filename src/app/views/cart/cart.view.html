@@ -13,9 +13,9 @@
             <tr *ngFor="let item of cart.items">
                 <td><b>{{item.book.title}}</b></td>
                 <td>
-                    <div class="input-group input-group-sm flex-nowrap">
+                    <div class="input-group input-group-sm flex-nowrap justify-content-center">
                         <div class="input-group-prepend">
-                            <a class="btn btn-primary btn-sm" (click)="updateAmount(item,item.amount-1)">
+                            <a class="btn btn-primary btn-sm align-middle align-items-center" (click)="updateAmount(item,item.amount-1)">
                                 <fa-icon [icon]="['fas', 'minus']"></fa-icon>
                             </a>
                         </div>

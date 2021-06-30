@@ -4,6 +4,10 @@
 
 Projeto desenvolvido em [Angular](https://github.com/angular/angular-cli) versão 12.1.0.
 
+## Instalando a aplicação
+
+Executar comando `npm install` para instalar os pacotes necessários para rodar a aplicação. 
+
 ## Executando a aplicação
 
 Executar comando `ng serve` para iniciar o servidor de desenvolvimento. 
