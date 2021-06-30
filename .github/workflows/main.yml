@@ -11,9 +11,6 @@ jobs:
     name: Deploy levarme-client
     runs-on: ubuntu-latest
 
-    env:
-      GH_TOKEN: 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
-
     steps:
     - name: Obter última versão do código
       uses: actions/checkout@v2.3.2
