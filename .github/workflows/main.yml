@@ -30,4 +30,4 @@ jobs:
       run: npm run test
       
     - name: Publicar app no github pages
-    - run: npm run deploy
+      run: npm run deploy
