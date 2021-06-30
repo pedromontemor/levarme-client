@@ -24,7 +24,7 @@ export class HomeView {
         this.cartPrice = this.cartService.getPrice();
         this.cartAmount = this.cartService.getAmount();
         this.route.queryParams.subscribe(query => {
-            let title = query.title == undefined ? '' : query.title;
+            let title = query.title == undefined ? '' : (<string>query.title).toLowerCase();
             this.bookService.get(title).then(books => {
                 this.books = books;
                 this.loadingData = false;
