@@ -1,3 +1,5 @@
+![Logo](https://pedromontemor.github.io/levarme-client/assets/img/logo-levarme.png)
+
 # Levar.me client
 
 [![Deploy app no github pages](https://github.com/pedromontemor/levarme-client/actions/workflows/main.yml/badge.svg)](https://github.com/pedromontemor/levarme-client/actions/workflows/main.yml)
