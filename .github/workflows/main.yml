@@ -30,4 +30,6 @@ jobs:
 #      run: npm run test
       
     - name: Publicar app no github pages
-      run: npm run deploy
+      env:
+        token: ${{ secrets.GH_TOKEN }}
+      run: npx angular-cli-ghpages --dir=dist/livraria --no-silent --repo=https://$token@github.com/pedromontemor/levarme-client.git --name=\"pedromontemor\" --email=\"p.montemorfaria@gmail.com\"
