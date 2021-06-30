@@ -16,7 +16,7 @@ export class HomeView {
     cart: ICart = <ICart>{};
     cartPrice: number = 0;
     cartAmount: number = 0;
-    showCartSummary: Boolean = false;
+    loadingData: Boolean = true;
         
 
     constructor(public cartService: CartService, public bookService: BookService, public route: ActivatedRoute) {
@@ -27,6 +27,7 @@ export class HomeView {
             let title = query.title == undefined ? '' : query.title;
             this.bookService.get(title).then(books => {
                 this.books = books;
+                this.loadingData = false;
             });
         })
     }
@@ -35,7 +36,6 @@ export class HomeView {
         this.cart = this.cartService.addItem(book);
         this.cartPrice = this.cartService.getPrice();
         this.cartAmount = this.cartService.getAmount();
-        this.showCartSummary = true;
     }
 
 };
