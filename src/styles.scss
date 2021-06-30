@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import './assets/variables.scss';
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+body {
+    font-size: 0.8rem;
+    font-family: 'Poppins';
+    background: #f0f0f0;
+}

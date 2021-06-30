@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+        <div class="book-item col mb-3" *ngFor="let book of books">
+            <img class="book-cover mx-auto d-block" [src]="book.images[0]">
+            <div class="card h-80">
+                <div class="card-body">
+                    <p class="book-title card-title">{{book.title | textellipsis: 30}}</p>
+                    <p class="book-description card-text">{{book.description | textellipsis: 200}}</p>
+                    <p class="book-price card-text">{{book.price | currency: 'BRL'}}</p>
+                    <a class="btn btn-primary btn-sm" (click)="addToCart(book)">Adicionar ao carrinho</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cart-preview" [ngClass]="{visible: showCartSummary}">
+        <div class="cart-navbar">
+            <div class="cart-footer-container container">
+                <div class="cart-footer-summary-container">
+                    <div>
+                        <div class="text-right">{{cartAmount}} livros</div>
+                        <div>{{cartPrice | currency: 'BRL'}}</div>
+                    </div>
+                    <a class="btn btn-primary ml-3" href="/cart">ver carrinho</a>
+                </div>
+                <div class="cart-thumb-container">
+                    <div class="cart-item" *ngFor="let item of cart.items">
+                        <img [src]="item.book.images[0]" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,10 @@
+$theme-colors: (
+  "primary": #6045af,
+  "secondary": #65a300
+);
+
+$seconday-color: map-get($theme-colors, "seconday");
+
+$grid-gutter-width: 16px !default;
+
+

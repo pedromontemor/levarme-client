@@ -1,0 +1,43 @@
+.header {
+  background: #fff;
+  transition: all .4s ease-in-out;
+  
+  &.sticky {
+    box-shadow: 0 0 8px rgba(0,0,0,.16);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+}
+
+.sticky + #main {
+  padding-top: 84px;
+}
+
+.logo {
+  padding: 16px 0;
+
+  img {
+    width: 160px;
+  }
+}
+
+.cart-icon {
+  font-size: 1.6rem;
+}
+
+#main {
+    flex-grow: 1;
+}
+
+.footer {
+    background: #1b1c29;
+    color: #fff;
+}
+
+#app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,47 @@
+<div class="card container p-sm-4">
+    <h3>Meu carrinho</h3>
+    <table class="table table-hover" *ngIf="cart.items.length > 0">
+        <thead>
+            <tr>
+                <th>Descrição</th>
+                <th class="text-center">Quantidade</th>
+                <th class="text-center">Valor total</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of cart.items">
+                <td><b>{{item.book.title}}</b></td>
+                <td>
+                    <div class="input-group input-group-sm flex-nowrap">
+                        <div class="input-group-prepend">
+                            <a class="btn btn-primary btn-sm" (click)="updateAmount(item,item.amount-1)">
+                                <fa-icon [icon]="['fas', 'minus']"></fa-icon>
+                            </a>
+                        </div>
+                        <span class="amount-input input-group-text">{{item.amount}}</span>
+                        <div class="input-group-append">
+                            <a class="btn btn-primary btn-sm" (click)="updateAmount(item,item.amount + 1)">
+                                <fa-icon [icon]="['fas', 'plus']"></fa-icon>
+                            </a>
+                        </div>
+                    </div>
+                </td>
+                <td class="text-center">{{item.amount * item.book.price | currency: 'BRL'}}</td>
+                <td class="text-center">
+                    <a class="btn btn-danger" (click)="removeItem(item)">
+                        <fa-icon [icon]="['fas', 'times']"></fa-icon>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td></td>
+            <td></td>
+            <td class="text-center"><b>{{ getCartTotalPrice() | currency: 'BRL'}}</b></td>
+            <td></td>
+        </tfoot>
+    </table>
+    <div *ngIf="cart.items.length == 0" class="alert alert-primary">Nenhum livro foi adicionado ao seu carrinho ainda.
+        <a href="/">Clique aqui</a> e adicione seu primeiro livro.</div>
+</div>
