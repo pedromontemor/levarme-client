@@ -1,4 +1,4 @@
-name: Deploy prod site on push
+name: Deploy app no github pages
 
 on: 
   push:
