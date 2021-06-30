@@ -1,0 +1,33 @@
+name: Deploy prod site on push
+
+on: 
+  push:
+    branches: 
+      - master
+      
+jobs:
+  web-deploy:
+
+    name: Deploy levarme-client
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Obter última versão do código
+      uses: actions/checkout@v2.3.2
+
+    - name: Setup do Node.js 14 LTS
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+      
+    - name: Instalar pacotes npm
+      run: npm install
+
+    - name: Build  do projeto
+      run: npm run build-prod
+      
+    - name: Executar testes
+      run: npm run test
+      
+    - name: Publicar app no github pages
+    - run: npm run deploy
